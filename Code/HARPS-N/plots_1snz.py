@@ -14,7 +14,7 @@ from scattplots import scattplots
 from pgramplots import pgramplots
 
 #Define vars needed to read in data
-datfile = '/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/1szn.csv'  ##### 12 SEASONS #####
+datfile = '/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/1szn.csv'  ##### 1 SEASON #####
 datsep = ','
 head = 0 
 
