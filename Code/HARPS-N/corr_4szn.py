@@ -14,7 +14,7 @@ from scattplots import scattplots
 from pgramplots import pgramplots
 
 #Define vars needed to read in data
-#datfile = '/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/allszn.csv' ##### ALL SEASONS #####
+
 datfile = '/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/1234szn.csv'  ##### 1234 SEASONS #####
 datsep = ','
 head = 0 
@@ -54,13 +54,13 @@ subinds = [allinds, S1inds, S2inds, S3inds, S4inds]
 sublabs = [None, 'Season 1', 'Season 2', 'Season 3', 'Season 4']
 colrs = ['darkslateblue', 'cyan', 'magenta', 'red', 'yellow']
 
-scattplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, '/Users/jameshoenstine/Desktop/Research/scatt_plot/.9ms_4szn.png')
+scattplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, '/Users/jameshoenstine/Desktop/Research/scatt_plot/1ms_4szn.png')
 
 
 ##################################
 ####### CORRELATION PLOTS ########
 
-corrplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, '/Users/jameshoenstine/Desktop/Research/corr_plot/.9ms_4szn.png')
+corrplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, '/Users/jameshoenstine/Desktop/Research/corr_plot/1ms_4szn.png')
 
 
 ##################################
@@ -69,5 +69,5 @@ corrplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, '/Users/jameshoens
 Pmax_plt = 150.
 fapr = 0.01
 sublabs = ['Full Dataset', 'Season 1', 'Season 2', 'Season 3', 'Season 4']
-pgramplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, Pmax_plt, fapr, '/Users/jameshoenstine/Desktop/Research/pgram_plots/.9ms_4szn.png')
+pgramplots(dat_arr, dat_err, pltlabs, subinds, sublabs, colrs, Pmax_plt, fapr, '/Users/jameshoenstine/Desktop/Research/pgram_plots/1ms_4szn.png')
 
