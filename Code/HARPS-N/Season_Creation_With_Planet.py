@@ -92,50 +92,57 @@ szn123456789 = pd.concat([season1,season2,season3,season4,season5,season6,season
 szn12345678910 = pd.concat([season1,season2,season3,season4,season5,season6,season7,season8,season9,season10],ignore_index=True, sort=False)
 
 
+
+
+
 ################## SAVES COMBINED SEASONS AS CSV ##################
 
-szn12.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/12szn.csv')
-szn123.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/123szn.csv')
-szn1234.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/1234szn.csv')
-szn12345.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/12345szn.csv')
-szn123456.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/123456szn.csv')
-szn1234567.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/1234567szn.csv')
-szn12345678.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/12345678szn.csv')
-szn123456789.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/123456789szn.csv')
-szn12345678910.to_csv('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/12345678910szn.csv')
+
+
+szn12.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12.csv')
+szn123.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn123.csv')
+szn1234.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn1234.csv')
+szn12345.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12345.csv')
+szn123456.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn123456.csv')
+szn1234567.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn1234567.csv')
+szn12345678.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12345678.csv')
+szn123456789.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn123456789.csv')
+szn12345678910.to_csv('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12345678910.csv')
 
 
 
 ################## USE FOR .DAT CREATION FOR PYORBIT ##################
-'''
 
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season1.dat', season1, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season2.dat', season2, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season3.dat', season3, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season4.dat', season4, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season5.dat', season5, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season6.dat', season6, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season7.dat', season7, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season8.dat', season8, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season9.dat', season9, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/season10.dat', season10, fmt='  %.6f',delimiter='   ',)
 
-'''
+
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season1.dat', season1, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season2.dat', season2, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season3.dat', season3, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season4.dat', season4, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season5.dat', season5, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season6.dat', season6, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season7.dat', season7, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season8.dat', season8, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season9.dat', season9, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/season10.dat', season10, fmt='  %.6f',delimiter='   ',)
+
+
 
 
 ################## CREATES COMBINED SEASONS FOR .DAT FILES FOR PYORBIT  ##################
 
-'''
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn12.dat', szn12, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn123.dat', szn123, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn1234.dat', szn1234, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn12345.dat', szn12345, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn123456.dat', szn123456, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn1234567.dat', szn1234567, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn12345678.dat', szn12345678, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn123456789.dat', szn123456789, fmt='  %.6f',delimiter='   ',)
-np.savetxt('/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/szn12345678910.dat', szn12345678910, fmt='  %.6f',delimiter='   ',)
-'''
+
+
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12.dat', szn12, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn123.dat', szn123, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn1234.dat', szn1234, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12345.dat', szn12345, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn123456.dat', szn123456, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn1234567.dat', szn1234567, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12345678.dat', szn12345678, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn123456789.dat', szn123456789, fmt='  %.6f',delimiter='   ',)
+np.savetxt('/Users/jameshoenstine/Desktop/Research/Code/HARPS_Code/10_szn_1ms/szn12345678910.dat', szn12345678910, fmt='  %.6f',delimiter='   ',)
+
 
 
 
