@@ -1,0 +1,15 @@
+The seasons were selected to optimize the data points available. 
+The seasons vary on the six months choosen span. The majority share a span of July through January.
+This is due to low data points during specfic times.
+
+                                                    
+Season 1:   2015/07/29 → 2016/01/29 
+Season 2:   2016/07/29 → 2017/01/25
+Season 3:   2017/05/13 → 2017/11/11      From Nov 12th 2017 through Feb 12th 2018 the fibre transporting light calibration unit broken. Still collected data, but lower RV precision
+Season 4:   2018/07/29 → 2019/01/29 
+Season 5:   2019/05/26 → 2019/11/26      Data was rejected from Nov 27th 2019 through Jun 1st 202, due to TH-AR HC lamp was dying 
+Season 6:   2020/06/30 → 2020/12/29      Unknown reason for lesser points during July through Jan
+Season 7:   2021/07/29 → 2022/01/29 
+Season 8:   2022/07/29 → 2023/01/21
+Season 9:   2023/06/16 → 2023/12/15      Unknown reason for lesser points during July through Jan
+Season 10:  2024/07/31 → 2025/01/29 
