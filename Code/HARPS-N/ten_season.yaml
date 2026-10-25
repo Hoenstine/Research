@@ -1,0 +1,264 @@
+inputs:
+  RVdata_full:
+    file: data/szn12345678910.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic
+  RVdata_1:
+    file: data/season1.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s1
+  RVdata_2:
+    file: data/season2.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s2 
+  RVdata_3:
+    file: data/season3.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s3 
+  RVdata_4:
+    file: data/season4.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s4       
+  RVdata_5:
+    file: data/season5.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s5 
+  RVdata_6:
+    file: data/season6.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s6 
+  RVdata_7:
+    file: data/season7.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s7 
+  RVdata_8:
+    file: data/season8.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s8
+  RVdata_9:
+    file: data/season9.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s9 
+  RVdata_10:
+    file: data/season10.dat
+    kind: RV
+    models:
+      - radial_velocities
+      - gp_quasiperiodic_s10              
+common:
+  planets:
+    b:
+      orbit: keplerian
+      parametrization: Eastman2013
+      boundaries:
+        P: [75, 85]
+        K: [0.001, 5.317781]
+        e: [0.00, 0.90]
+  activity:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60] #Decay time scale of active regions common examples show 20 - 1000
+      Oamp: [0.001, 1.0]
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]
+  activity_s1:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]      
+  activity_s2:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]   
+  activity_s3:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]         
+  activity_s4:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]         
+  activity_s5:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]                
+  activity_s6:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]   
+  activity_s7:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]   
+  activity_s8:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]   
+  activity_s9:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]   
+  activity_s10:
+    kind: activity
+    boundaries:
+      Prot: [0, 60]
+      Pdec: [0, 60]
+      Oamp: [0.001, 1.0]  
+    priors:
+      Oamp: ['Gaussian', 0.25, 0.025]   
+  star:
+    star_parameters:
+      boundaries:
+        radius: 1.0
+        mass: 1.0
+        density: 1.0
+
+models:
+    radial_velocities:
+        planets:
+            - b
+    gp_quasiperiodic:
+        model: gp_quasiperiodic
+        common: activity
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781] 
+    gp_quasiperiodic_s1:
+        model: gp_quasiperiodic
+        common: activity_s1
+       # hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]            
+    gp_quasiperiodic_s2:
+        model: gp_quasiperiodic
+        common: activity_s2
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]                 
+    gp_quasiperiodic_s3:
+        model: gp_quasiperiodic
+        common: activity_s3
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s4:
+        model: gp_quasiperiodic
+        common: activity_s4
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s5:
+        model: gp_quasiperiodic
+        common: activity_s5
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s6:
+        model: gp_quasiperiodic
+        common: activity_s6
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s7:
+        model: gp_quasiperiodic
+        common: activity_s7
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s8:
+        model: gp_quasiperiodic
+        common: activity_s8
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s9:
+        model: gp_quasiperiodic
+        common: activity_s9
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+    gp_quasiperiodic_s10:
+        model: gp_quasiperiodic
+        common: activity_s10
+        #hyperparameters_condition: True  # Condition from Rajpaul 2017, Rajpaul+2021
+        rotation_decay_condition: False # It forces the decay timescale to be at least twice the rotational period
+        boundaries:
+            Hamp: [0.0,5.317781]    
+parameters:
+  Tref: 58969.05
+solver:
+  pyde:
+    ngen: 50000
+    npop_mult: 4
+  emcee:
+    npop_mult: 4
+    nsteps: 300000
+    nburn: 70000
+    nsave: 25000
+    thin: 10
