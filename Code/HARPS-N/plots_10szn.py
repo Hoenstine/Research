@@ -11,7 +11,7 @@ import pandas as pd
 import numpy as np
 from corrplots import corrplots
 from scattplots import scattplots
-from pgramplots import pgramplots
+from pgramplots1 import pgramplots
 
 #Define vars needed to read in data
 #datfile = '/Users/jameshoenstine/Desktop/Research/Pyorbit/all_seasons/1/allszn.csv' ##### ALL SEASONS #####
